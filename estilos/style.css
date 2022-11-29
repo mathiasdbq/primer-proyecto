@@ -1,0 +1,278 @@
+/* fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200&family=Montserrat:wght@700&display=swap');
+
+/* estilos */
+body {
+    background-color: #73A9AD;
+    font-family: 'Montserrat', sans-serif;
+    color: #F5F0BB;
+}
+/* pagina principal (seleccion de personajes) */
+#titulo{
+    margin-top: 8px;
+    font-size: 52px;
+}
+
+#subtitulo-selecciona-personaje{
+    font-size: 28px;
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+#personajes {
+    display: flex;
+    gap: 20px;
+}
+
+.imagen-personajes{
+    width: 200px;
+}
+
+.tarjeta-personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #90C8AC;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    cursor: pointer;
+}
+    .tarjeta-personaje:hover{
+        box-sizing: border-box;
+        border: solid 5px #F5F0BB;
+        padding: 5px;
+        /* box-shadow: 1px 1px 1px #839AA8; */
+    }
+    .tarjeta-personaje:active{
+        box-sizing: border-box;
+        border: solid 5px #F5F0BB;
+    }
+
+input.cartaDeMokepones {
+    display: none;
+}
+input:checked+label {
+    box-sizing: border-box;
+    border: solid 5px #F5F0BB;
+    padding: 5px;
+}
+
+#boton-mascota{
+    list-style: none;
+    background-color: #90C8AC;
+    border: 0px solid ;
+    color: #F5F0BB;
+    border-radius: 20px;
+    margin-top: 28px;
+    height: 40px;
+    width: 15%;
+    cursor: pointer;
+}
+    #boton-mascota:hover{
+        border: solid 1px #839AA8; 
+        
+    }
+    #boton-mascota:active{
+        border: solid #F5F0BB;
+    }
+
+/* combate */ 
+
+#seleccionar-ataque{
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#tajetas-jugadores{
+    display: flex;
+    justify-content: center;
+    /* gap: 50%; */
+}
+
+    /* tarjeta jugador */
+#seleccionar-ataque h2{
+    text-align: center;
+}
+
+/* #resultado{
+    background-color: #90C8AC;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0;
+} */
+#mensaje-final{
+    text-align: center;
+    background-color: #90C8AC;
+    border-radius: 20px;
+    padding: 10px;
+    display: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: -20px;
+}
+
+#tarjeta-ataque{
+    display: flex;
+    width: 235px;
+    height: 284px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #C4DFAA;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: solid 5px #839AA8;
+}
+#tarjeta-ataque h3{
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+#tarjeta-ataque img{
+    width: 200px;
+}
+
+    /* tarjeta rival */
+#tarjeta-ataque-rival{
+    display: flex;
+    width: 235px;
+    height: 284px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #C4DFAA;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: solid 5px #839AA8;
+}
+#tarjeta-ataque-rival h3{
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+#tarjeta-ataque-rival img{
+    width: 200px;
+}
+
+#botones-combate{
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.botones-ataque{
+    list-style: none;
+    background-color: #90C8AC;
+    border: 0px solid ;
+    color: #F5F0BB;
+    border-radius: 20px;
+    margin-top: 28px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+}
+    .botones-ataque:hover{
+        border: solid 1px #839AA8; 
+        
+    }
+    .botones-ataque:active{
+        border: solid #F5F0BB;
+    }
+
+    /* textos */
+#mensajes{
+    display: flex;
+}
+
+    /* boton reiniciar*/
+#div-reinicio{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#boton-reiniciar{
+    list-style: none;
+    background-color: #90C8AC;
+    border: 0px solid ;
+    color: #F5F0BB;
+    border-radius: 20px;
+    margin-top: 28px;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+}
+    #boton-reiniciar:hover{
+        border: solid 1px #839AA8; 
+        
+    }
+    #boton-reiniciar:active{
+        border: solid #F5F0BB;
+    }
+
+/* responsive*/
+@media (max-width: 720px) {
+    #personajes {
+        flex-direction: column;
+    }
+    #tarjeta-ataque img, #tarjeta-ataque-rival img{
+        width: 140px;
+    }
+    #tajetas-jugadores {
+        gap: 10%;
+    }
+    #boton-mascota{
+        width: 100px;
+    }
+    #subtitulo-selecciona-personaje {
+        text-align: center;
+    }
+}
+/* resultados del combate */
+#mensajes-rival{
+    width: 30px;
+}
+
+#mensajes-jugador{
+    width: 30px;
+}
+
+#combat-results{
+    display: flex;
+    justify-content: space-between;
+}
+
+#resultado {
+    display: flex;
+    width: 154px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#datos-combate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 312px;
+}
+.pResult{
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+/* mapa */
+#ver-mapa{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mapa{
+    border: 2px solid #F5F0BB;
+}

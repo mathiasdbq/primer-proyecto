@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Metapod</title>
+</head>
+<body>
+
+    <section id="seleccionar-mascota">
+        <h1 id="titulo"> Mokepon</h1>
+
+        <h2 id="subtitulo-selecciona-personaje">selecciona tu compañero</h2>
+
+        <!-- personajes -->
+        <div id="personajes"></div>
+        <button id="boton-mascota"> Seleccionar </button>
+
+    </section>
+    <section id="ver-mapa">
+        <h1 id="titulo"> Recorre el mapa con tu mascota</h1>
+        <canvas id="mapa" ></canvas>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()" style="display:none;"> arriba </button>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()" style="display:none;"> izquierda </button>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()" style="display:none;"> abajo </button>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()" style="display:none;"> derecha </button>
+    </section>
+
+    <!-- ataques -->
+    <section id="seleccionar-ataque">
+        <h2>Selecciona tu ataque</h2>
+            <div id="botones-combate" id="contenedor-ataques">
+            </div>
+        </div>
+
+        <div id="tajetas-jugadores">
+            <div id="tarjeta-ataque">
+                <h3 id="mascota-jugador"></h3>
+                <div id="vidas-batalla">
+                    <span id="vidas-jugador"></span>
+                </div>
+                <div id="imagen-mascota"></div>
+            </div>
+            <div id="datos-combate">
+                <div id="mensaje-final"> </div>
+                <div id="resultado"></div>
+            </div>
+            <div id="tarjeta-ataque-rival">
+                <h3 id="mascota-rival"></h3>
+                <div id="vidas-batalla-rival">
+                    <span id="vidas-rival"></span>
+                </div>
+                <div id="imagen-mascota-rival"></div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- texto  -->
+    <div id="mensajes"> 
+    </div>
+
+    <!-- reinciar -->
+    <div id="div-reinicio">
+        <button id="boton-reiniciar">Reiniciar</button>
+    </div>
+
+    <script src="java/funcionamiento.js"></script>
+</body>
+</html>
